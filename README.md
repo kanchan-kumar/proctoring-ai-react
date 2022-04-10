@@ -55,14 +55,8 @@ The output will be the warning which will be displayed on the screen which will 
 		- Full Screen Triggers
 		- Tab Change Detections
 		- Examinee's Photo 
-
-**Developers**
- - [Agnellus Fernandes ](https://www.linkedin.com/in/agnellus-fernandes-81232b192)
- - [Anisha Fernandes](https://www.linkedin.com/in/anisha-fernandes-9063651a1)
- - [Clarice D'silva](https://www.linkedin.com/in/clarice-dsilva-1689151a7)
--  [Sancia D'cunha](https://www.linkedin.com/in/sancia-d-cunha-291a94194)
-
-**Developers**
+		
+**References**
  - https://github.com/AgnellusX1/GodsEye
  - https://github.com/tusharnankani/Aankh
  - https://github.com/vardanagarwal/Proctoring-AI
