@@ -13,30 +13,32 @@ const MainPage = () => {
   const history = useHistory();
 
   function handleClick() {
-  var mywindow = window.open("/login", "NewWindow", "height=700,width=1720")
-    history.push("/login");
+  //var mywindow = window.open("/login", "NewWindow", "height=700,width=1720")
+   // history.push("/login");
+    sessionStorage.setItem("checkname", "guest");
+    history.push("/systemcheck")
   }
 
   function handleClickDetect() {
     history.push("/detections")
   }
-  
+
 
   // function handleClickDetect2() {
   //   history.push("/detections2")
   // }
-  
-  function handleClickAdmin() {
-    history.push("/adminsignin")
 
+  function handleClickAdmin() {
+    //history.push("/adminsignin")
+    history.push("/admin")
   }
-  
+
 
   function headpose() {
     history.push("/posenet")
   }
 
- 
+
 
   return (
     <div>

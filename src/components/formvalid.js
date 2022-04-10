@@ -17,23 +17,28 @@ const Formvalid = () => {
   }
 
   const [formvalid, setFormvalid] = useState('');
-  
+
 
   function onChangeformvalid(e) {
     setFormvalid(e.target.value);
   }
-  
-  
+
+
 
   function handleClickformvalid() {
     //console.log(formvalid)
-    const con_db = firebase.database().ref("con_dbs");
+    sessionStorage.setItem("form_link", "https://oexamination.herokuapp.com/");
+    sessionStorage.setItem("exam_timer", "120");
+    sessionStorage.setItem("formvalid", formvalid);
+
+    history.push("/dashboard2");
+    /*const con_db = firebase.database().ref("con_dbs");
 
     //console.log(Object.keys(con_db))
     con_db.on('value', (snapshot) => {
       var s = snapshot.val()
       var d = s[formvalid]
-    
+
       if (d != null) {
         var form_link = d["formlink"]
         var exam_timer = d["examtimer"]
@@ -42,22 +47,22 @@ const Formvalid = () => {
         sessionStorage.setItem("form_link", form_link);
         sessionStorage.setItem("exam_timer",exam_timer);
         sessionStorage.setItem("formvalid",formvalid);
-        
+
         history.push("/Dashboard");
       }
       else {
         swal("Invalid Exam Code", "Please Enter A Valid Examcode", "error");
       }
 
-    });
+    });*/
   };
 
   return (
-    
+
     <div className="App-header1">
       <h3><p  align="center" style={{color:'white'}} >Enter Exam Code To Proceed</p></h3>
       <center>
-      
+
       <td class="text-center">
         <input type="text" id="formvalid" name="formvalid" value={formvalid} onChange={onChangeformvalid}></input>
         <br></br>
@@ -66,7 +71,7 @@ const Formvalid = () => {
       </td>
       <br></br>
     </center>
-    </div> 
+    </div>
   )
 }
 
